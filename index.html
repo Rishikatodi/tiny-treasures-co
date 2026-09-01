@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tiny Treasures Co. – liebevoll kuratierte und personalisierte Mitgebsel für Kindergeburtstage in München. Ab 6 € pro Kind.">
+<title>Tiny Treasures Co. | Mitgebsel für Kindergeburtstage in München</title>
+<style>
+:root{
+  --sage:#8fa88b; --sage-dark:#536c50; --cream:#faf7f0; --beige:#eee5d6;
+  --lav:#d8c7e8; --terracotta:#c98672; --charcoal:#2f302d; --white:#fff;
+  --shadow:0 18px 50px rgba(47,48,45,.10); --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--charcoal);background:var(--cream);line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(250,247,240,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(47,48,45,.07)}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:Georgia,serif;letter-spacing:.13em;text-transform:uppercase;font-size:17px}
+.logo small{display:block;font:10px/1.2 Inter,sans-serif;letter-spacing:.25em;text-align:center;margin-top:3px}
+.links{display:flex;gap:26px;font-size:14px}
+.links a:hover{color:var(--sage-dark)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:999px;background:var(--sage-dark);color:white;font-weight:700;border:0;cursor:pointer}
+.btn.alt{background:var(--terracotta)}
+.btn.outline{background:transparent;color:var(--sage-dark);border:1px solid var(--sage-dark)}
+.hero{padding:72px 0 55px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:54px;align-items:center}
+.kicker{display:inline-block;padding:7px 13px;border-radius:999px;background:var(--lav);font-size:13px;font-weight:700;margin-bottom:18px}
+h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(44px,6vw,76px);line-height:.98;margin:0 0 22px;letter-spacing:-.03em}
+h1 em{color:var(--sage-dark);font-style:normal}
+.lead{font-size:19px;max-width:590px;color:#5c5d58}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+.micro{font-size:13px;color:#77786f}
+.hero-card{position:relative}
+.hero-card img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:32px;box-shadow:var(--shadow)}
+.price{position:absolute;left:-18px;bottom:24px;background:white;padding:17px 21px;border-radius:18px;box-shadow:var(--shadow);font-weight:800}
+.price span{display:block;font-size:12px;font-weight:500;color:#74756d}
+section{padding:78px 0}
+.section-head{max-width:700px;margin-bottom:35px}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;color:var(--sage-dark)}
+h2{font-family:Georgia,serif;font-size:clamp(34px,4vw,50px);font-weight:500;line-height:1.05;margin:9px 0 13px}
+.section-head p{color:#66675f;font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 30px rgba(47,48,45,.06)}
+.card img{aspect-ratio:1/1;object-fit:cover}
+.cardbody{padding:22px}
+.card h3{margin:0 0 7px;font-family:Georgia,serif;font-size:25px;font-weight:500}
+.card p{margin:0;color:#6b6c64;font-size:14px}
+.pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.pill{padding:8px 12px;background:var(--cream);border:1px solid #e4ddcf;border-radius:999px;font-size:12px}
+.band{background:var(--sage-dark);color:white}
+.band .section-head p{color:#e7ece5}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{padding:28px;border:1px solid rgba(255,255,255,.18);border-radius:22px;background:rgba(255,255,255,.08)}
+.num{width:35px;height:35px;border-radius:50%;background:var(--lav);color:var(--charcoal);display:grid;place-items:center;font-weight:800;margin-bottom:18px}
+.step h3{margin:0 0 8px;font-size:19px}
+.step p{margin:0;color:#dfe7dc;font-size:14px}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.feature-img{border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
+.checks{display:grid;gap:13px;margin:25px 0}
+.check{display:flex;gap:11px;align-items:flex-start}
+.check b{color:var(--sage-dark)}
+.partner{background:var(--beige);border-radius:32px;padding:42px}
+.partner-grid{display:grid;grid-template-columns:1fr .8fr;gap:40px;align-items:center}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+details{background:white;border-radius:18px;padding:18px 20px;box-shadow:0 6px 24px rgba(47,48,45,.05)}
+summary{font-weight:750;cursor:pointer}
+details p{color:#686960;font-size:14px;margin:12px 0 0}
+.cta{background:linear-gradient(135deg,var(--lav),#f0e9f7);border-radius:34px;padding:52px;text-align:center}
+.cta h2{margin-top:0}
+footer{padding:40px 0 25px;border-top:1px solid #e5ded1}
+.footerin{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+footer p{margin:4px 0;color:#74756d;font-size:13px}
+.social{font-weight:750;color:var(--sage-dark)}
+@media(max-width:850px){
+ .links{display:none}.hero-grid,.feature,.partner-grid{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr 1fr}.hero{padding-top:45px}.hero-card{max-width:650px;margin:auto}
+}
+@media(max-width:560px){
+ section{padding:58px 0}.cards,.steps,.faq{grid-template-columns:1fr}.cta{padding:34px 20px}.footerin{flex-direction:column}.navin{height:68px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#top">Tiny Treasures<small>CO.</small></a>
+    <div class="links">
+      <a href="#mitgebsel">Mitgebsel</a>
+      <a href="#themes">Themen</a>
+      <a href="#ablauf">So funktioniert's</a>
+      <a href="#kita">Kita & Partner</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <a class="btn" href="#kontakt">Anfragen</a>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="kicker">📍 München & Umgebung</span>
+      <h1>Kleine Geschenke.<br><em>Große Freude.</em></h1>
+      <p class="lead">Liebevoll kuratierte Mitgebsel für Kindergeburtstage – passend zu Alter, Party-Motto und Budget. Auf Wunsch personalisiert.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#kontakt">🎁 Mitgebsel anfragen</a>
+        <a class="btn outline" href="#themes">Themen entdecken</a>
+      </div>
+      <p class="micro">Ab 6 € / Kind · individuelle Zusammenstellung · für München & Umgebung</p>
+    </div>
+    <div class="hero-card">
+      <img src="assets/paw-bags.jpg" alt="Personalisierte blaue Paw Patrol Mitgebsel-Taschen">
+      <div class="price">ab 6 € <span>pro Kind</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="mitgebsel">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Was wir machen</div>
+      <h2>Mitgebsel, die nicht nach „irgendwas in einer Tüte“ aussehen.</h2>
+      <p>Wir wählen kleine, altersgerechte Überraschungen aus und stimmen sie auf deine Party ab – von der Verpackung bis zur persönlichen Dankeskarte.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-img"><img src="assets/dino.jpg" alt="Dinosaurier Geschenkbox mit kreativen Aktivitäten"></div>
+      <div>
+        <div class="checks">
+          <div class="check">✨ <span><b>Altersgerecht</b><br>Wir berücksichtigen Alter und passende Aktivitäten.</span></div>
+          <div class="check">🎨 <span><b>Passend zum Motto</b><br>Dino, Einhorn, Dschungel, Paw Patrol – oder dein eigenes Thema.</span></div>
+          <div class="check">💌 <span><b>Persönlich</b><br>Name, Dankeskarte und kleine Details machen jedes Mitgebsel besonders.</span></div>
+          <div class="check">💶 <span><b>Passend zum Budget</b><br>Einfach, schön und transparent – ab 6 € pro Kind.</span></div>
+        </div>
+        <a class="btn" href="#kontakt">Meine Party planen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Unsere Themen</div>
+      <h2>Dein Motto. Deine Mitgebsel.</h2>
+      <p>Diese Auswahl ist nur der Anfang. Wir können die Mitgebsel an fast jedes Party-Motto anpassen.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><img src="assets/jungle.jpg" alt="Dschungel-Thema"><div class="cardbody"><h3>🌿 Dschungel</h3><p>Abenteuerlich, kreativ und voller kleiner Entdeckungen.</p><div class="pills"><span class="pill">Explorer</span><span class="pill">Safari</span></div></div></article>
+      <article class="card"><img src="assets/unicorn.jpg" alt="Einhorn-Thema"><div class="cardbody"><h3>🦄 Einhorn</h3><p>Magisch, farbenfroh und liebevoll verpackt.</p><div class="pills"><span class="pill">Magic</span><span class="pill">Rainbow</span></div></div></article>
+      <article class="card"><img src="assets/dino.jpg" alt="Dinosaurier-Thema"><div class="cardbody"><h3>🦖 Dino</h3><p>Für kleine Dino-Fans mit Lust auf kreative Abenteuer.</p><div class="pills"><span class="pill">Jurassic</span><span class="pill">Explorer</span></div></div></article>
+    </div>
+    <div style="margin-top:20px;background:white;border-radius:22px;padding:24px;text-align:center;box-shadow:0 6px 24px rgba(47,48,45,.05)">
+      <strong>🐾 Paw Patrol · 🚀 Space · 🎨 Art Party · ⚽ Fußball · 🧚 Märchen · … dein Thema</strong>
+      <div style="color:#6b6c64;margin-top:6px;font-size:14px">Die Liste endet hier nicht – schreib uns einfach dein Party-Motto.</div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="ablauf">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" style="color:#d8e4d5">So einfach geht's</div>
+      <h2>Du planst die Party.<br>Wir kümmern uns um die kleinen Schätze.</h2>
+      <p>Kein stundenlanges Suchen nach passenden Kleinigkeiten. Du sagst uns, was du brauchst – wir kuratieren den Rest.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Du erzählst uns von der Party</h3><p>Alter, Anzahl der Kinder, Motto und dein Budget.</p></div>
+      <div class="step"><div class="num">2</div><h3>Wir kuratieren</h3><p>Wir stellen passende Produkte zusammen und stimmen Verpackung & Personalisierung ab.</p></div>
+      <div class="step"><div class="num">3</div><h3>Abholen oder erhalten</h3><p>Deine fertigen Mitgebsel sind bereit für den großen Tag.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kita">
+  <div class="container">
+    <div class="partner">
+      <div class="partner-grid">
+        <div>
+          <div class="eyebrow">Für Kitas, Krippen & Eventplaner</div>
+          <h2>Eine schöne Ergänzung zu eurem Geburtstagsangebot.</h2>
+          <p>Ihr gestaltet das Geburtstagserlebnis – wir kümmern uns um die kleinen Geschenke für die Gäste.</p>
+          <div class="checks">
+            <div class="check">🎈 <span>Lokales Angebot für München & Umgebung</span></div>
+            <div class="check">🎁 <span>Optionale Mitgebsel als Zusatzangebot</span></div>
+            <div class="check">📸 <span>Content & Muster für Instagram Stories</span></div>
+          </div>
+          <a class="btn alt" href="mailto:todi.rishika0@gmail.com?subject=Kooperation%20Tiny%20Treasures">Kooperation besprechen</a>
+        </div>
+        <div>
+          <img src="assets/paw.jpg" alt="Paw Patrol Mini Treasure Bag mit Inhalt" style="border-radius:24px">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Häufige Fragen</div>
+      <h2>Alles Wichtige auf einen Blick.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Ab welchem Preis starten die Mitgebsel?</summary><p>Unsere Mini Treasure Bags starten ab 6 € pro Kind. Der genaue Preis hängt von Alter, Anzahl, Thema, Inhalt und Personalisierung ab.</p></details>
+      <details><summary>Kann ich mein eigenes Party-Motto wählen?</summary><p>Ja. Unsere gezeigten Themen sind Beispiele. Wir können die Mitgebsel passend zu deinem individuellen Party-Motto gestalten.</p></details>
+      <details><summary>Kann ich die Namen der Kinder personalisieren lassen?</summary><p>Ja, je nach gewähltem Paket können z. B. Name, Sticker oder eine persönliche Dankeskarte integriert werden.</p></details>
+      <details><summary>Für welche Altersgruppen?</summary><p>Wir stellen die Inhalte altersgerecht zusammen. Bei jüngeren Kindern berücksichtigen wir besonders die Eignung der einzelnen Produkte.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="container">
+    <div class="cta">
+      <div class="eyebrow">Dein Kindergeburtstag in München?</div>
+      <h2>Erzähl uns von deiner Party. 🎂</h2>
+      <p style="max-width:650px;margin:0 auto 25px;color:#5e605a">Schick uns Motto, Alter, Anzahl der Kinder und dein Wunschbudget – wir melden uns mit einer passenden Idee.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn" href="mailto:todi.rishika0@gmail.com?subject=Mitgebsel-Anfrage%20Tiny%20Treasures&body=Hallo%20Tiny%20Treasures%20Co.,%0A%0AMein%20Party-Motto:%0AAlter:%0AAnzahl%20Kinder:%0ABudget%20pro%20Kind:%0AParty-Datum:%0A%0AVielen%20Dank!">📧 Anfrage senden</a>
+        <a class="btn outline" href="https://www.instagram.com/tinytreasuresco.de/" target="_blank" rel="noopener">📷 Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footerin">
+    <div>
+      <div class="logo">Tiny Treasures<small>CO.</small></div>
+      <p>Liebevoll kuratierte Mitgebsel für Kindergeburtstage.</p>
+      <p>📍 Munich, Germany</p>
+    </div>
+    <div>
+      <p>📧 <a href="mailto:todi.rishika0@gmail.com">todi.rishika0@gmail.com</a></p>
+      <p class="social">📷 <a href="https://www.instagram.com/tinytreasuresco.de/" target="_blank" rel="noopener">@tinytreasuresco.de</a></p>
+    </div>
+  </div>
+  <div class="container" style="margin-top:25px;text-align:center"><p>© 2026 Tiny Treasures Co.</p></div>
+</footer>
+</body>
+</html>
