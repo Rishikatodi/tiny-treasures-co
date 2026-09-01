@@ -71,6 +71,12 @@ summary{font-weight:750;cursor:pointer}
 details p{color:#686960;font-size:14px;margin:12px 0 0}
 .cta{background:linear-gradient(135deg,var(--lav),#f0e9f7);border-radius:34px;padding:52px;text-align:center}
 .cta h2{margin-top:0}
+.contact-form{max-width:760px;margin:30px auto 0;text-align:left;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-form label{display:grid;gap:7px;font-size:14px;font-weight:700}
+.contact-form input,.contact-form textarea{width:100%;padding:12px 14px;border:1px solid #d7d0c5;border-radius:12px;background:rgba(255,255,255,.86);color:var(--charcoal);font:inherit;font-weight:400}
+.contact-form textarea{min-height:110px;resize:vertical}
+.contact-form .full{grid-column:1 / -1}
+.contact-form .submit-row{display:flex;justify-content:center;margin-top:4px}
 footer{padding:40px 0 25px;border-top:1px solid #e5ded1}
 .footerin{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
 footer p{margin:4px 0;color:#74756d;font-size:13px}
@@ -79,7 +85,7 @@ footer p{margin:4px 0;color:#74756d;font-size:13px}
  .links{display:none}.hero-grid,.feature,.partner-grid{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr 1fr}.hero{padding-top:45px}.hero-card{max-width:650px;margin:auto}
 }
 @media(max-width:560px){
- section{padding:58px 0}.cards,.steps,.faq{grid-template-columns:1fr}.cta{padding:34px 20px}.footerin{flex-direction:column}.navin{height:68px}
+ section{padding:58px 0}.cards,.steps,.faq,.contact-form{grid-template-columns:1fr}.cta{padding:34px 20px}.footerin{flex-direction:column}.navin{height:68px}
 }
 </style>
 </head>
@@ -93,7 +99,7 @@ footer p{margin:4px 0;color:#74756d;font-size:13px}
       <a href="#themes">Themen</a>
       <a href="#ablauf">So funktioniert's</a>
       <a href="#kita">Kita & Partner</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt">Contact</a>
     </div>
     <a class="btn" href="#kontakt">Anfragen</a>
   </div>
@@ -188,7 +194,7 @@ footer p{margin:4px 0;color:#74756d;font-size:13px}
             <div class="check">🎁 <span>Optionale Mitgebsel als Zusatzangebot</span></div>
             <div class="check">📸 <span>Content & Muster für Instagram Stories</span></div>
           </div>
-          <a class="btn alt" href="mailto:todi.rishika0@gmail.com?subject=Kooperation%20Tiny%20Treasures">Kooperation besprechen</a>
+          <a class="btn alt" href="#kontakt">Kooperation besprechen</a>
         </div>
         <div>
           <img src="assets/paw.jpg" alt="Paw Patrol Mini Treasure Bag mit Inhalt" style="border-radius:24px">
@@ -218,9 +224,35 @@ footer p{margin:4px 0;color:#74756d;font-size:13px}
     <div class="cta">
       <div class="eyebrow">Dein Kindergeburtstag in München?</div>
       <h2>Erzähl uns von deiner Party. 🎂</h2>
-      <p style="max-width:650px;margin:0 auto 25px;color:#5e605a">Schick uns Motto, Alter, Anzahl der Kinder und dein Wunschbudget – wir melden uns mit einer passenden Idee.</p>
-      <div class="hero-actions" style="justify-content:center">
-        <a class="btn" href="mailto:todi.rishika0@gmail.com?subject=Mitgebsel-Anfrage%20Tiny%20Treasures&body=Hallo%20Tiny%20Treasures%20Co.,%0A%0AMein%20Party-Motto:%0AAlter:%0AAnzahl%20Kinder:%0ABudget%20pro%20Kind:%0AParty-Datum:%0A%0AVielen%20Dank!">📧 Anfrage senden</a>
+      <p style="max-width:650px;margin:0 auto;color:#5e605a">Tell us a little about the party and we’ll get back to you with a fitting idea.</p>
+      <form class="contact-form" name="party-enquiry" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="party-enquiry">
+        <label>Name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>Party date
+          <input type="date" name="party-date" required>
+        </label>
+        <label>Child's age
+          <input type="number" name="child-age" min="0" max="18" required>
+        </label>
+        <label>Number of children
+          <input type="number" name="number-of-children" min="1" required>
+        </label>
+        <label>Theme
+          <input type="text" name="theme" required>
+        </label>
+        <label>Budget/child
+          <input type="text" name="budget-per-child" required>
+        </label>
+        <label class="full">Personalisation
+          <textarea name="personalisation" placeholder="Names, colours, special requests…"></textarea>
+        </label>
+        <div class="submit-row full">
+          <button class="btn" type="submit">Send enquiry</button>
+        </div>
+      </form>
+      <div class="hero-actions" style="justify-content:center;margin-bottom:0">
         <a class="btn outline" href="https://www.instagram.com/tinytreasuresco.de/" target="_blank" rel="noopener">📷 Instagram</a>
       </div>
     </div>
@@ -236,7 +268,7 @@ footer p{margin:4px 0;color:#74756d;font-size:13px}
       <p>📍 Munich, Germany</p>
     </div>
     <div>
-      <p>📧 <a href="mailto:todi.rishika0@gmail.com">todi.rishika0@gmail.com</a></p>
+      <p>📧 todi.rishika0@gmail.com</p>
       <p class="social">📷 <a href="https://www.instagram.com/tinytreasuresco.de/" target="_blank" rel="noopener">@tinytreasuresco.de</a></p>
     </div>
   </div>
